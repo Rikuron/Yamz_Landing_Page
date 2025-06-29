@@ -1,10 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-montserrat-bold: 'montserrat-bold';
+  --font-galindo: 'galindo';
+  --animate-float: float 3s ease-in-out infinite;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,14 +22,27 @@
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@font-face {
+  font-family: 'montserrat-bold';
+  src: url('/fonts/Montserrat-Bold.ttf') format('truetype');
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@font-face {
+  font-family: 'galindo';
+  src: url('/fonts/Galindo-Regular.ttf') format('truetype');
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(-5px);
   }
+  50% {
+    transform: translateY(30px);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
 }
