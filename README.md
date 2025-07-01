@@ -94,20 +94,20 @@ A modern, responsive landing page for Yamz Computer Solutions built with Next.js
 
 ## 📁 Project Structure
 
-src/
-├── app/
-│ ├── components/
-│ │ └── FloatingElement.tsx
-│ ├── sections/
-│ │ ├── about.tsx # Interactive About section with slider
-│ │ ├── hero.tsx # Video background hero section
-│ │ ├── header.tsx # Navigation header
-│ │ ├── contact.tsx # (Planned)
-│ │ ├── footer.tsx # (Planned)
-│ │ ├── products.tsx # (Planned)
-│ │ └── services.tsx # (Planned)
-│ ├── globals.css # Global styles and custom CSS
-│ ├── layout.tsx # Root layout
+src/ <br>
+├── app/ <br>
+│ ├── components/ <br>
+│ │ └── FloatingElement.tsx <br>
+│ ├── sections/ <br>
+│ │ ├── about.tsx # Interactive About section with slider <br>
+│ │ ├── hero.tsx # Video background hero section <br>
+│ │ ├── header.tsx # Navigation header <br>
+│ │ ├── contact.tsx # (Planned) <br>
+│ │ ├── footer.tsx # (Planned) <br>
+│ │ ├── products.tsx # (Planned) <br>
+│ │ └── services.tsx # (Planned) <br>
+│ ├── globals.css # Global styles and custom CSS <br>
+│ ├── layout.tsx # Root layout <br>
 │ └── page.tsx # Main page component
 
 ## 🎯 Key Components
