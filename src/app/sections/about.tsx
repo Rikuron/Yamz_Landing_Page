@@ -24,23 +24,23 @@ const About = () => {
         className="mySwiper mt-5"
       >
         <SwiperSlide>
-        <div className="flex flex-col md:flex-row px-20 items-center justify-center gap-8 p-8">
-          <div className="md:w-1/2">
-            <Image src="/images/yamz_store.jpg" alt="Yamz Computer Solutions Store" width={500} height={500} className="rounded-lg shadow-lg" />
+          <div className="flex flex-col md:flex-row px-20 items-center justify-center gap-8 p-8">
+            <div className="md:w-1/2">
+              <Image src="/images/yamz_store.jpg" alt="Yamz Computer Solutions Store" width={500} height={500} className="rounded-lg shadow-lg" />
+            </div>
+            <div className="md:w-1/2 text-left">
+              <h3 className="text-2xl font-bold mb-4">Welcome to Yamz Computer Solutions</h3>
+              <p>
+                We are your trusted partner for all things tech. Based in Iligan City, Philippines, we offer services such as computer and mobile repair, sales, system development, and more! You can find us at
+              </p>
+              <p className="mt-3">
+                <a href="https://maps.app.goo.gl/U2K9WALbfKWe12MG9" target="_blank" className="bg-gradient-to-r from-blue-700 via-blue-400 to-blue-100 bg-clip-text text-transparent opacity-80 hover:opacity-100 transition-opacity duration-300 hover:cursor-pointer">
+                  <FaMapMarkerAlt className="inline-block mr-2 text-blue-500 -mt-1.5" />
+                  Gen Aguinaldo St, Poblacion, Iligan City, 9200 Lanao del Norte
+                </a>
+              </p>
+            </div>
           </div>
-          <div className="md:w-1/2 text-left">
-            <h3 className="text-2xl font-bold mb-4">Welcome to Yamz Computer Solutions</h3>
-            <p>
-              We are your trusted partner for all things tech. Based in Iligan City, Philippines, we offer services such as computer and mobile repair, sales, system development, and more! You can find us at
-            </p>
-            <p className="mt-3">
-              <a href="https://maps.app.goo.gl/U2K9WALbfKWe12MG9" target="_blank" className="bg-gradient-to-r from-blue-700 via-blue-400 to-blue-100 bg-clip-text text-transparent opacity-80 hover:opacity-100 transition-opacity duration-300 hover:cursor-pointer">
-                <FaMapMarkerAlt className="inline-block mr-2 text-blue-500 -mt-1.5" />
-                Gen Aguinaldo St, Poblacion, Iligan City, 9200 Lanao del Norte
-              </a>
-            </p>
-          </div>
-        </div>
         </SwiperSlide>
         {/* <SwiperSlide>
           <div className="flex flex-col md:flex-row px-20 items-center justify-center gap-8 p-8">
