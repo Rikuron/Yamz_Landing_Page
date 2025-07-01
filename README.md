@@ -112,6 +112,12 @@ src/ <br>
 
 ## 🎯 Key Components
 
+### Header
+- Logo integration with Cloudinary
+- Navigation menu
+- Social media links (Facebook, Email)
+- Responsive design
+  
 ### Hero Section
 - Full-screen video background
 - Company branding with custom fonts
@@ -123,12 +129,6 @@ src/ <br>
 - Two-slide navigation (Company overview & Vision/Mission)
 - Responsive image and text layout
 - Custom navigation arrows
-
-### Header
-- Logo integration with Cloudinary
-- Navigation menu
-- Social media links (Facebook, Email)
-- Responsive design
 
 ## 🔧 Configuration
 
