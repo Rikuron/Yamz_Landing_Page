@@ -8,7 +8,7 @@ interface ProductCardProps {
 
 const productCard = ({ name, image, description }: ProductCardProps) => {
   return (
-    <div className="bg-white rounded-2xl shadow-md p-3 h-auto cursor-pointer hover:scale-105 transition-all duration-300">
+    <div className="bg-white rounded-2xl shadow-md p-3 h-auto hover:scale-105 transition-all duration-300">
       <div className="relative w-full h-48">
         <Image src={image} alt={name} fill className="object-cover rounded-lg" />
       </div>
