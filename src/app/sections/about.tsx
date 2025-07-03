@@ -26,7 +26,7 @@ const About = () => {
         <SwiperSlide>
           <div className="flex flex-col md:flex-row px-20 items-center justify-center gap-8 p-8">
             <div className="md:w-1/2">
-              <Image src="/images/yamz_store.jpg" alt="Yamz Computer Solutions Store" width={500} height={500} className="rounded-lg shadow-lg" />
+              <Image src="https://res.cloudinary.com/dgwcnkzdg/image/upload/v1751384444/yamz_store_jtqwog.jpg" alt="Yamz Computer Solutions Store" width={500} height={500} className="rounded-lg shadow-lg" />
             </div>
             <div className="md:w-1/2 text-left">
               <h3 className="text-2xl font-bold mb-4">Welcome to Yamz Computer Solutions</h3>

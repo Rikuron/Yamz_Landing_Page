@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description: "Where Technology Meets Reliability",
   keywords: "Yamz Computer Solutions, Computer Solutions, Computer Repair, Computer Maintenance, Computer Upgrades, Computer Sales, Computer Parts, Computer Accessories, Computer Software, Computer Hardware, Computer Networking, Computer Security, Computer Optimization, Computer Troubleshooting, Computer Training, Computer Consulting, Computer Services, Computer Repairs, Computer Upgrades, Computer Sales, Computer Parts, Computer Accessories, Computer Software, Computer Hardware, Computer Networking, Computer Security, Computer Optimization, Computer Troubleshooting, Computer Training, Computer Consulting, Computer Services",
   icons: {
-    icon: "/images/yamz_logo_only.ico"
+    icon: "/yamz_logo_only.ico"
   },
 };
 

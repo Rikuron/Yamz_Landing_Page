@@ -1,0 +1,23 @@
+import React from 'react'
+import ProductCard from '../components/productCard'
+import products from '../data/products.json'
+
+const Products = () => {
+  return (
+    <div className="px-15 pb-15 pt-20 text-center">
+      <div className="container mx-auto">
+        <div className="inline-block">
+          <h2 className="text-4xl font-bold mb-2">Our Products!</h2>
+          <div className="h-1.5 -mx-6 bg-gradient-to-r from-blue-500 to-cyan-800 rounded-full" />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+          {products.map((product, index) => (
+            <ProductCard key={index} {...product} />
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Products;
