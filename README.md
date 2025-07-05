@@ -4,7 +4,7 @@ This is the official repository for the Yamz Computer Solutions landing page, a 
 
 ## 🚀 Live Demo
 
-[Link to your deployed website]
+[(https://yamz-computer-solutions.vercel.app)]
 
 ## ✨ Features
 
