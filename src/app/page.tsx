@@ -4,6 +4,7 @@ import Services from './sections/services'
 import Products from './sections/products'
 import Contact from './sections/contact'
 import Footer from './sections/footer'
+import GoToTopButton from './components/GoToTopButton'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Products />
       <Contact />
       <Footer />
+      <GoToTopButton />
     </div>
   );
 }
