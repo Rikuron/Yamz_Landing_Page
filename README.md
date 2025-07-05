@@ -14,6 +14,9 @@ https://yamz-computer-solutions.vercel.app
 - **Interactive Components**: 
   - Full-screen video background in the hero section with animated elements.
   - Interactive sliders for "About" and "Services" sections, powered by SwiperJS.
+  - A dynamic header that changes on scroll.
+  - Active navigation highlighting that tracks the user's position on the page.
+  - A "Go to Top" button for improved navigation.
   - Custom hover effects and transitions for a richer user experience.
 - **Optimized Performance**: Leverages Next.js features like Image Optimization and is configured with Turbopack for rapid development.
 - **Custom Branding**: Integrates custom fonts and a consistent color scheme to match the Yamz Computer Solutions brand.
@@ -27,19 +30,18 @@ https://yamz-computer-solutions.vercel.app
 - **Slider/Carousel**: SwiperJS 11.2.10
 - **Icons**: React Icons 5.5.0
 - **Development**: ESLint, Turbopack
+- **Custom Hooks**: React Hooks for scroll-based interactions.
 
 ## 📋 Implemented Sections
 
-- **Header**: Sticky navigation bar with the company logo and social media links (Facebook, Email).
+- **Header**: A sticky, dynamic navigation bar with active section highlighting, the company logo, and social media links.
 - **Hero Section**: An immersive, full-screen video background with the company logo (featuring a blue drop-shadow glow) and branding. Includes floating animations for the logo and a downward-pointing arrow to encourage scrolling.
 - **About Section**: A two-slide interactive slider showcasing the company's overview, location, mission, and vision.
 - **Services Section**: A responsive, multi-item carousel displaying the services offered. Features navigation, dynamic pagination, looping, and loads all content from a JSON file.
-
-## 🚧 Future Development
-
 - **Products Section**: A dedicated area to showcase products for sale.
-- **Contact Form**: An interactive form to allow users to send inquiries directly.
+- **Contact Section**: An interactive area for users to get in touch.
 - **Footer**: A comprehensive footer with site links, contact information, and social media icons.
+- **Go To Top Button**: A button that appears on scroll to take the user back to the top of the page.
 
 ## 🚀 Getting Started
 
@@ -86,6 +88,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 src/app/ <br>
 ├── components/ # Reusable React components (e.g., FloatingElement.tsx) <br>
 ├── data/ # Static data files (e.g., services.json) <br>
+├── hooks/ # Custom React hooks for managing component state and side effects. <br>
 ├── sections/ # Major page sections (Hero, About, Services, etc.) <br>
 ├── globals.css # Global styles, Tailwind directives, and custom animations <br>
 ├── layout.tsx # Root layout for the application <br>
@@ -94,6 +97,8 @@ src/app/ <br>
 ## 🎯 Key Components
 
 ### Header
+- **Dynamic UI**: Header background and style change on scroll.
+- **Active Section Highlighting**: Navigation links are highlighted as the user scrolls through sections.
 - Logo integration with Cloudinary
 - Navigation menu
 - Social media links (Facebook, Email)
@@ -108,6 +113,7 @@ src/app/ <br>
 ### About Section
 - SwiperJS slider implementation
 - Two-slide navigation (Company overview & Vision/Mission)
+  - Vision/Mission commented out
 - Responsive image and text layout
 - Custom navigation arrows
 
@@ -115,6 +121,28 @@ src/app/ <br>
 -   **Dynamic Data**: Maps over `services.json` to generate service cards, making content management simple.
 -   **Responsive Carousel**: Uses Swiper's `breakpoints` to display 1, 2, or 3 slides depending on the screen width.
 -   **Enhanced UX**: Features `loop` for infinite scrolling and `dynamicBullets` for more engaging pagination.
+
+### Products Section
+- Displays a collection of products available for purchase.
+- Clean, grid-based layout.
+- Responsive design for all screen sizes.
+
+### Contact Section
+- Provides contact information and ways to get in touch.
+- Designed for easy user interaction.
+
+### Footer
+- Contains essential links, contact details, and social media icons.
+- Consistent branding and design.
+
+### GoToTopButton
+- A reusable component that appears when the user scrolls down the page.
+- Provides a smooth scroll-to-top animation when clicked.
+- Visibility is controlled by the `useGoToTopButton` hook.
+
+### Custom Hooks
+- **`useScrollActivity`**: Tracks scroll position to manage the header's dynamic state and highlight the active navigation section.
+- **`useGoToTopButton`**: Monitors the scroll position to determine when the "Go to Top" button should be visible.
 
 ## 🔧 Configuration
 
