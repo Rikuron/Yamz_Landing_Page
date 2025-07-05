@@ -14,7 +14,7 @@ import { Navigation, Pagination } from 'swiper/modules'
 
 const Services = () => {
   return (
-    <div className="px-15 pb-15 pt-20 text-center">
+    <div className="px-15 pb-15 pt-20 text-center bg-gradient-to-b from-[#112d60] to-white">
       <div className="container mx-auto">
         <div className="inline-block">
           <h2 className="text-4xl font-bold mb-2">We Offer These Services!</h2>
@@ -40,7 +40,7 @@ const Services = () => {
           }}
         >
           {services.map((service, index) => (
-            <SwiperSlide key={index} className="px-3 py-5">
+            <SwiperSlide key={index} className="px-3 py-10">
               <div className="bg-white rounded-lg shadow-lg text-left h-96 cursor-pointer hover:scale-105 transition-all duration-300 hover:border-3 hover:border-blue-500">
                 <div className="rounded-lg">
                   <Image 

@@ -3,13 +3,13 @@ import { FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 
 const Contact = () => {
   return (
-    <div className="px-15 pb-15 pt-20 text-center">
+    <div className="px-15 pb-15 pt-20 text-center bg-gradient-to-b from-white to-[#112d60]">
       <div className="container mx-auto">
         <div className="inline-block">
-          <h2 className="text-4xl font-bold mb-2">Contact Us!</h2>
-          <div className="h-1.5 -mx-6 bg-gradient-to-r from-blue-500 to-white rounded-full" />
+          <h2 className="text-4xl font-bold mb-2 text-[#112d60]">Contact Us!</h2>
+          <div className="h-1.5 -mx-6 bg-gradient-to-r from-blue-500 to-[#112d60] rounded-full" />
         </div>
-        <div className="mx-auto mt-7 text-center">
+        <div className="mx-auto mt-7 text-center text-black">
           <div className="flex flex-col items-center justify-center gap-1.5">
             <a 
               href="https://mail.google.com/mail/?view=cm&fs=1&to=yamzcomputerz@gmail.com&su=Feedback&body=Hello%20Yamz%20Computer%20Solutions%20Team," 

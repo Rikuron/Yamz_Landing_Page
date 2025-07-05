@@ -3,6 +3,7 @@ import About from './sections/about'
 import Services from './sections/services'
 import Products from './sections/products'
 import Contact from './sections/contact'
+import Footer from './sections/footer'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Services />
       <Products />
       <Contact />
+      <Footer />
     </div>
   );
 }
