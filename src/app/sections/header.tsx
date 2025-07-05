@@ -3,11 +3,10 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { FaFacebook, FaEnvelope, FaBars, FaTimes } from 'react-icons/fa'
+import { useScrollActivity } from '../hooks/useScrollActivity';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
 
   // Navigation items
   const navigationItems = [
@@ -17,6 +16,9 @@ const Header = () => {
     { label: 'Products', href: '#products', id: 'products' },
     { label: 'Contact', href: '#contact', id: 'contact' },
   ]
+
+  // Scroll activity hook
+  const { scrolled, activeSection } = useScrollActivity(navigationItems);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -28,38 +30,6 @@ const Header = () => {
       document.body.classList.remove('overflow-hidden');
     };
   }, [isMenuOpen]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-      // Handle active section highlighting
-      let currentSectionId = 'home';
-      for (const item of navigationItems) {
-        const element = document.getElementById(item.id);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          // Check if the section is at or above the middle of the screen
-          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-            currentSectionId = item.id;
-            break;
-          }
-        }
-      }
-      
-      // Override for the very top of the page
-      if (window.scrollY < 100) {
-        currentSectionId = 'home';
-      }
-
-      setActiveSection(currentSectionId);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    // Run on mount to set initial state
-    handleScroll();
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   // Smooth scroll to the target section
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>) => {

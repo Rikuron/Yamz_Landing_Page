@@ -1,30 +1,11 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { FaArrowUp } from 'react-icons/fa';
+import { useGoToTopButton } from '../hooks/useGoToTopButton';
 
 const GoToTopButton = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const servicesSection = document.getElementById('services');
-    if (!servicesSection) return;
-
-    const threshold = servicesSection.offsetTop;
-
-    const toggleVisibility = () => {
-      if (window.scrollY > threshold) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
-
-    window.addEventListener('scroll', toggleVisibility);
-    toggleVisibility();
-
-    return () => window.removeEventListener('scroll', toggleVisibility);
-  }, []);
+  const { isVisible } = useGoToTopButton('services');
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
