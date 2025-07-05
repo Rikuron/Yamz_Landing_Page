@@ -12,8 +12,8 @@ import { FaMapMarkerAlt } from 'react-icons/fa'
 
 const About = () => {
   return (
-    <div className="bg-[#112d60] py-15">
-      <div className="container mx-auto bg-[#081630] pb-16 pt-20 text-center">
+    <div id="about" className="bg-[#112d60] py-15">
+      <div className="container md:mx-auto mr-6 bg-[#081630] pb-16 pt-20 text-center">
         <div className="inline-block">
           <h2 className="text-4xl font-bold mb-2">About Us</h2>
           <div className="h-1.5 -mx-6 bg-gradient-to-r from-blue-500 to-white rounded-full" />

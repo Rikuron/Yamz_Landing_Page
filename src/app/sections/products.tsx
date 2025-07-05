@@ -4,7 +4,7 @@ import products from '../data/products.json'
 
 const Products = () => {
   return (
-    <div className="px-15 pb-15 pt-20 text-center bg-white">
+    <div id="products" className="px-15 pb-15 pt-20 text-center bg-white">
       <div className="container mx-auto">
         <div className="inline-block">
           <h2 className="text-4xl font-bold mb-2 bg-gradient-to-r from-blue-500 to-cyan-800 text-transparent bg-clip-text">Our Products!</h2>

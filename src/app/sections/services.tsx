@@ -14,7 +14,7 @@ import { Navigation, Pagination } from 'swiper/modules'
 
 const Services = () => {
   return (
-    <div className="px-15 pb-15 pt-20 text-center bg-gradient-to-b from-[#112d60] to-white">
+    <div id="services" className="px-15 pb-15 pt-20 text-center bg-gradient-to-b from-[#112d60] to-white">
       <div className="container mx-auto">
         <div className="inline-block">
           <h2 className="text-4xl font-bold mb-2">We Offer These Services!</h2>
