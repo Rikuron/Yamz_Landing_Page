@@ -1,6 +1,6 @@
 import React from 'react'
 import ProductCard from '../components/productCard'
-import products from '../data/products.json'
+import { products } from '../data/products'
 
 const Products = () => {
   return (
