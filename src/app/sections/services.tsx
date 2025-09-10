@@ -18,6 +18,8 @@ const Services = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   const handleServiceClick = (service: Service) => {
+    if (!service.hasModal) return
+    
     setSelectedService(service)
     setIsModalOpen(true)
   }
@@ -55,7 +57,7 @@ const Services = () => {
               {services.map((service, index) => (
                 <SwiperSlide key={index} className="px-3 py-10">
                   <div 
-                    className="bg-white rounded-lg shadow-lg text-left h-96 cursor-pointer hover:scale-105 transition-all duration-300 hover:border-3 hover:border-blue-500"
+                    className={`bg-white rounded-lg shadow-lg text-left h-96 ${service.hasModal ? 'cursor-pointer hover:scale-105' : ''} transition-all duration-300 hover:border-3 hover:border-blue-500`}
                     onClick={() => handleServiceClick(service)}
                   >
                     <div className="rounded-lg">

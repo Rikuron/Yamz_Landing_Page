@@ -2,8 +2,9 @@ export type Service = {
   name: string
   description: string
   image: string
-  cardDescription: string
-  cardImages: {
+  hasModal?: boolean
+  cardDescription?: string
+  cardImages?: {
     src: string
     imageDescription: string
   }[]
@@ -14,18 +15,13 @@ export const services: Service[] = [
     "name": "Sales/Services",
     "description": "Offering tech products and services, including GCash transactions and more!",
     "image": "https://res.cloudinary.com/dgwcnkzdg/image/upload/v1751384835/Sales_Services_exctvl.jpg",
-    "cardDescription": "Previous sales of tech products, GCash transactions, and more.",
-    "cardImages": [
-        {
-          "src": "",
-          "imageDescription": ""
-        }
-    ]
+    "hasModal": false
   },
   {
-    "name": "PC Repair & Upgrades",
-    "description": "Diagnose, repair, and enhance your PC’s performance efficiently.",
-    "image": "https://res.cloudinary.com/dgwcnkzdg/image/upload/v1751384835/PC_Repair_Upgrades_gmsssg.jpg",
+    "name": "Desktop Repair",
+    "description": "Diagnose, repair, and enhance your PC and Laptop’s performance efficiently.",
+    "image": "https://res.cloudinary.com/dgwcnkzdg/image/upload/v1757500927/Desktop_Repair_g2gpw8.png",
+    "hasModal": true,
     "cardDescription": "Records of past repair projects and upgrades performed.",
     "cardImages": [
       {
@@ -34,11 +30,12 @@ export const services: Service[] = [
       }
     ]
   },
-  {        
-    "name": "Printing/Photocopying Services",
-    "description": "Quick and affordable document printing and photocopying for all your needs.",
-    "image": "https://res.cloudinary.com/dgwcnkzdg/image/upload/v1751384835/Printing_Photocopying_Services_bnpqkm.jpg",
-    "cardDescription": "Previous high-quality printing and photocopying work.",
+  {
+    "name": "Mobile Repair",
+    "description": "Provide diagnostic and repair services for your Mobile Phones.",
+    "image": "https://res.cloudinary.com/dgwcnkzdg/image/upload/v1757500912/Mobile_Repair_xxjuad.png",
+    "hasModal": true,
+    "cardDescription": "Records of past repair projects and upgrades performed.",
     "cardImages": [
       {
         "src": "",
@@ -47,10 +44,11 @@ export const services: Service[] = [
     ]
   },
   {
-    "name": "Laptop Repairs",
-    "description": "Professional laptop repairs to get your device back in top shape.",
-    "image": "https://res.cloudinary.com/dgwcnkzdg/image/upload/v1751384835/Laptop_Repairs_wo6cpj.jpg",
-    "cardDescription": "Recent laptop repair cases handled by our team.",
+    "name": "Software Services",
+    "description": "Provide software installation and configuration services for your systems.",
+    "image": "https://res.cloudinary.com/dgwcnkzdg/image/upload/v1757500918/Software_Services_ortvjd.png",
+    "hasModal": true,
+    "cardDescription": "Recent OS installations and configurations",
     "cardImages": [
       {
         "src": "",
@@ -59,10 +57,11 @@ export const services: Service[] = [
     ]
   },
   {
-    "name": "System Formatting/Installation",
-    "description": "Complete OS installations and formatting for a fresh start on your system.",
-    "image": "https://res.cloudinary.com/dgwcnkzdg/image/upload/v1751384837/System_Formatting_Installation_c15kiv.png",
-    "cardDescription": "Formatting and OS installation cases we've completed.",
+    "name": "Maintenance & Cleaning",
+    "description": "Keep your systems in top condition with regular maintenance and cleaning.",
+    "image": "https://res.cloudinary.com/dgwcnkzdg/image/upload/v1757500950/Maintenance_and_Cleaning_pryqux.jpg",
+    "hasModal": true,
+    "cardDescription": "Recent maintenance and cleaning projects",
     "cardImages": [
       {
         "src": "",
@@ -71,10 +70,11 @@ export const services: Service[] = [
     ]
   },
   {
-    "name": "Software Upgrades",
-    "description": "Update to the latest software for improved performance and security.",
-    "image": "https://res.cloudinary.com/dgwcnkzdg/image/upload/v1751384836/Software_Upgrades_ek5l23.jpg",
-    "cardDescription": "Instances of successful software upgrades.",
+    "name": "Network & Infrastructure",
+    "description": "Set up and manage your network, server, and IT infrastructure effectively.",
+    "image": "https://res.cloudinary.com/dgwcnkzdg/image/upload/v1757500914/Network_Infrastructure_e0wt1f.jpg",
+    "hasModal": true,
+    "cardDescription": "Examples of network setups and infrastructure management we've done in the past.",
     "cardImages": [
       {
         "src": "",
@@ -83,27 +83,9 @@ export const services: Service[] = [
     ]
   },
   {
-    "name": "System Development",
-    "description": "Custom system development to meet your specific business requirements.",
-    "image": "https://res.cloudinary.com/dgwcnkzdg/image/upload/v1751384836/System_Development_oqirb2.jpg",
-    "cardDescription": "Custom systems developed for clients in various industries.",
-    "cardImages": [
-      {
-        "src": "",
-        "imageDescription": ""
-      }
-    ]
-  },
-  {
-    "name": "CD/DVD Burning",
-    "description": "Reliable CD and DVD burning services for data storage or media sharing.",
-    "image": "https://res.cloudinary.com/dgwcnkzdg/image/upload/v1751384836/CD_DVD_Burning_fcjbie.jpg",
-    "cardDescription": "Previous CD/DVD burning projects for clients.",
-    "cardImages": [
-      {
-        "src": "",
-        "imageDescription": ""
-      }
-    ]
+    "name": "GCash Services",
+    "description": "Provide GCash services, including Cash In and Cash Out services.",
+    "image": "https://res.cloudinary.com/dgwcnkzdg/image/upload/v1757500990/GCash_m4hvqs.jpg",
+    "hasModal": false
   }
 ]

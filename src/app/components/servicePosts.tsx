@@ -18,9 +18,7 @@ const ServicePosts = ({ service, isOpen, onClose }: ServicePostsProps) => {
   // Close modal on Escape key
   React.useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        onClose()
-      }
+      if (e.key === 'Escape') onClose()
     }
 
     if (isOpen) {
@@ -38,9 +36,7 @@ const ServicePosts = ({ service, isOpen, onClose }: ServicePostsProps) => {
 
   // Close modal when clicking on overlay
   const handleOverlayClick = (e: React.MouseEvent) => {
-    if (e.target === e.currentTarget) {
-      onClose()
-    }
+    if (e.target === e.currentTarget) onClose()
   }
 
   return (
@@ -63,12 +59,14 @@ const ServicePosts = ({ service, isOpen, onClose }: ServicePostsProps) => {
         {/* Modal Body */}
         <div className="p-6">
           {/* Service Description */}
-          <div className="mb-6">
-            <p className="text-gray-700 leading-relaxed">{service.cardDescription}</p>
-          </div>
+          {service.cardDescription && (
+            <div className="mb-6">
+              <p className="text-gray-700 leading-relaxed">{service.cardDescription}</p>
+            </div>
+          )}
 
           {/* Images Swiper */}
-          {service.cardImages.length > 0 && service.cardImages[0].src && (
+          {service.cardImages && service.cardImages.length > 0 && service.cardImages[0].src && (
             <div>
               <h3 className="text-lg font-semibold mb-4 text-gray-800">Previous Work Examples</h3>
               <Swiper
@@ -107,7 +105,7 @@ const ServicePosts = ({ service, isOpen, onClose }: ServicePostsProps) => {
           )}
 
           {/* Placeholder when no images */}
-          {(!service.cardImages.length || !service.cardImages[0].src) && (
+          {(!service.cardImages || !service.cardImages.length || !service.cardImages[0].src) && (
             <div className="text-center py-8">
               <div className="bg-gray-100 rounded-lg p-8">
                 <p className="text-gray-500">Previous work examples will be displayed here once images are added.</p>
