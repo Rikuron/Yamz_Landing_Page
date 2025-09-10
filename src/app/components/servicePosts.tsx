@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { Service } from '../data/services'
+import { useModal } from '../hooks/useModal'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -15,29 +16,9 @@ interface ServicePostsProps {
 }
 
 const ServicePosts = ({ service, isOpen, onClose }: ServicePostsProps) => {
-  // Close modal on Escape key
-  React.useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose()
-    }
+  const { handleOverlayClick } = useModal({ isOpen, onClose })
 
-    if (isOpen) {
-      document.addEventListener('keydown', handleEscape)
-      document.body.style.overflow = 'hidden' // Prevent background scroll
-    }
-
-    return () => {
-      document.removeEventListener('keydown', handleEscape)
-      document.body.style.overflow = 'unset'
-    }
-  }, [isOpen, onClose])
-  
   if (!isOpen || !service) return null
-
-  // Close modal when clicking on overlay
-  const handleOverlayClick = (e: React.MouseEvent) => {
-    if (e.target === e.currentTarget) onClose()
-  }
 
   return (
     <div 
