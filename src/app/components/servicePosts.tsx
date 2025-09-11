@@ -53,7 +53,11 @@ const ServicePosts = ({ service, isOpen, onClose }: ServicePostsProps) => {
               <Swiper
                 slidesPerView={1}
                 spaceBetween={20}
-                navigation={true}
+                navigation={{
+                  nextEl: '.custom-next', 
+                  prevEl: '.custom-prev',
+                }}
+                loop={true}
                 pagination={{ 
                   clickable: true,
                   dynamicBullets: true 
@@ -76,11 +80,23 @@ const ServicePosts = ({ service, isOpen, onClose }: ServicePostsProps) => {
                         className="w-full h-48 object-cover" 
                       />
                       <div className="p-4">
-                        <p className="text-sm text-gray-600">{cardImage.imageDescription}</p>
+                        <p className="text-sm text-center text-gray-600">{cardImage.imageDescription}</p>
                       </div>
                     </div>
                   </SwiperSlide>
                 ))}
+
+                <div className="custom-prev absolute top-5/12 -translate-y-1/2 z-30 bg-white rounded-full shadow-lg flex items-center justify-center cursor-pointer hover:bg-[#2f86c1] hover:text-white transition-all duration-300 group left-2 w-10 h-10 md:left-4 md:w-12 md:h-12">
+                  <svg className="w-5 h-5 md:w-6 md:h-6 text-[#2f86c1] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                </div>
+                
+                <div className="custom-next absolute top-5/12 -translate-y-1/2 z-30 bg-white rounded-full shadow-lg flex items-center justify-center cursor-pointer hover:bg-[#2f86c1] hover:text-white transition-all duration-300 group right-2 w-10 h-10 md:right-4 md:w-12 md:h-12">
+                  <svg className="w-5 h-5 md:w-6 md:h-6 text-[#2f86c1] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
               </Swiper>
             </div>
           )}
