@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Hero = () => {
   return (
-    <div className="relative h-screen w-full">
+    <section id="home" className="relative h-screen w-full">
       <video
         autoPlay
         muted
@@ -30,7 +30,7 @@ const Hero = () => {
           </FloatingElement>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -12,10 +12,10 @@ import { FaMapMarkerAlt } from 'react-icons/fa'
 
 const About = () => {
   return (
-    <div id="about" className="bg-[#112d60] py-15">
+    <section id="about" className="bg-[#112d60] py-15">
       <div className="container md:mx-auto mr-6 bg-[#081630] pb-16 pt-20 text-center">
         <div className="inline-block">
-          <h2 className="text-4xl font-bold mb-2">About Us</h2>
+          <h1 className="text-4xl font-bold mb-2">About Us</h1>
           <div className="h-1.5 -mx-6 bg-gradient-to-r from-blue-500 to-white rounded-full" />
         </div>
         <Swiper
@@ -29,8 +29,8 @@ const About = () => {
               <div className="md:w-1/2">
                 <Image src="https://res.cloudinary.com/dgwcnkzdg/image/upload/v1751384444/yamz_store_jtqwog.jpg" alt="Yamz Computer Solutions Store" width={500} height={500} className="rounded-lg shadow-lg" />
               </div>
-              <div className="md:w-1/2 text-left">
-                <h3 className="text-2xl font-bold mb-4">Welcome to Yamz Computer Solutions</h3>
+              <div className="md:w-1/2 text-center md:text-left">
+                <h2  className="text-2xl font-bold mb-4">Welcome to Yamz Computer Solutions</h2>
                 <p>
                   We are your trusted partner for all things tech. Based in Iligan City, Philippines, we offer services such as computer and mobile repair, sales, system development, and more! You can find us at
                 </p>
@@ -63,7 +63,7 @@ const About = () => {
           </SwiperSlide> */}
         </Swiper>
       </div>
-    </div>
+    </section>
   )
 }
 

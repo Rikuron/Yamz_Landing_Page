@@ -4,10 +4,10 @@ import { products } from '../data/products'
 
 const Products = () => {
   return (
-    <div id="products" className="px-15 pb-15 pt-20 text-center bg-white">
+    <section id="products" className="px-15 pb-15 pt-20 text-center bg-white">
       <div className="container mx-auto">
         <div className="inline-block">
-          <h2 className="text-4xl font-bold mb-2 bg-gradient-to-r from-blue-500 to-cyan-800 text-transparent bg-clip-text">Our Products!</h2>
+          <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-blue-500 to-cyan-800 text-transparent bg-clip-text">Our Products!</h1>
           <div className="h-1.5 -mx-6 bg-gradient-to-r from-blue-500 to-cyan-800 rounded-full" />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
@@ -16,7 +16,7 @@ const Products = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
