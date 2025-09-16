@@ -40,7 +40,7 @@ export const useScrollActivity = (navigationItems: NavigationItem[]) => {
     handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [navigationItems]);
 
   return { scrolled, activeSection };
 };

@@ -5,17 +5,17 @@ import Image from 'next/image'
 import { FaFacebook, FaEnvelope, FaBars, FaTimes } from 'react-icons/fa'
 import { useScrollActivity } from '../hooks/useScrollActivity';
 
+// Navigation items
+const navigationItems = [
+  { label: 'Home', href: '#home', id: 'home' },
+  { label: 'About', href: '#about', id: 'about' },
+  { label: 'Services', href: '#services', id: 'services' },
+  { label: 'Products', href: '#products', id: 'products' },
+  { label: 'Contact', href: '#contact', id: 'contact' },
+]
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  // Navigation items
-  const navigationItems = [
-    { label: 'Home', href: '#home', id: 'home' },
-    { label: 'About', href: '#about', id: 'about' },
-    { label: 'Services', href: '#services', id: 'services' },
-    { label: 'Products', href: '#products', id: 'products' },
-    { label: 'Contact', href: '#contact', id: 'contact' },
-  ]
 
   // Scroll activity hook
   const { scrolled, activeSection } = useScrollActivity(navigationItems);

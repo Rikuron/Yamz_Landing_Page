@@ -10,7 +10,12 @@ const productCard = ({ name, image, description }: ProductCardProps) => {
   return (
     <div className="bg-white rounded-2xl shadow-[0_4px_10px_rgba(0,0,0,0.3)] p-3 h-auto hover:scale-105 transition-all duration-300">
       <div className="relative w-full h-48">
-        <Image src={image} alt={name} fill className="object-cover rounded-lg" />
+        <Image 
+          src={image} 
+          alt={name} 
+          fill 
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          className="object-cover rounded-lg" />
       </div>
       <div className="pt-2 px-4 pb-4 flex-1">
         <p className="text-md text-black font-bold text-center">{name}</p>
